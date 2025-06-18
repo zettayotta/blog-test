@@ -1,12 +1,12 @@
 # Project information
 site_name: blog-test-abjelke
-site_url: https://blog-test.abjelke.no/
+# site_url: https://blog-test.abjelke.no/
 site_author: Axel Bjelke
 site_description: This is the staging files for my new blog site.
 
 # Repository
 # repo_name: zettayotta/
-repo_url: https://github.com/zettayotta/blog-test
+# repo_url: https://github.com/zettayotta/blog-test
 # edit_uri: edit/main/docs/ # Specify the path from the base repository URL (repo_url) to the directory where your documentation source files are stored. See also: https://www.mkdocs.org/user-guide/configuration/
 
 # Copyright

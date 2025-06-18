@@ -165,4 +165,4 @@ nav:
   - Krageroterna:
     - terna/index.md
   - Tags: tags.md
-  - Om: om/index.md
+  # - Om: om/index.md

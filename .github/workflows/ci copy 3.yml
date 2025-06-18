@@ -22,7 +22,7 @@ jobs:
           remote-user: ${{ secrets.SFTP_USERNAME }}
           remote-password: ${{ secrets.SFTP_PASSWORD }}
           # ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          remote-path: "/var/www/example.com"
+          remote-path: "/"
           local-path: "./docs/tags.md"
           # sync: "full"
           proxy: false

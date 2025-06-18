@@ -47,7 +47,8 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}            # if using password
           port: ${{ secrets.SFTP_PORT }}
           local_path: './*'
-          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+          remote_path: '/'
+          # remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
           sftp_only: true
 
 env:

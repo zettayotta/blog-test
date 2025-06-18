@@ -46,7 +46,7 @@ jobs:
           # ssh_private_key: ${{ secrets.SFTP_PRIVATE_KEY }}  # or use password
           password: ${{ secrets.SFTP_PASSWORD }}            # if using password
           port: ${{ secrets.SFTP_PORT }}
-          local_path: './docs/tags.md*'
+          local_path: './docs/tags.md'
           remote_path: '/httpd.www/blog-test/'
           # remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
           sftp_only: true

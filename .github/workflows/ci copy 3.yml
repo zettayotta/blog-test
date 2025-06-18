@@ -1,0 +1,28 @@
+name: ci # started testing SFTP Deploy Action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Upload-to-SFTP:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: "Deploy"
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: "sftp"
+          remote-port: ${{ secrets.SFTP_PORT }}
+          remote-host: ${{ secrets.SFTP_HOST }}
+          remote-user: ${{ secrets.SFTP_USERNAME }}
+          remote-password: ${{ secrets.SFTP_PASSWORD }}
+          # ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          remote-path: "/var/www/example.com"
+          local-path: "./docs/tags.md"
+          # sync: "full"
+          proxy: false

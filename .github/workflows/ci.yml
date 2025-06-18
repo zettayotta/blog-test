@@ -36,6 +36,19 @@ jobs:
       # - run: mkdocs gh-deploy --force
       - name: Build MkDocs site
         run: mkdocs build
+      
+      # SFTP Deploy Action (code from Perplexity)
+      - name: Deploy to SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_HOST }}
+          # ssh_private_key: ${{ secrets.SFTP_PRIVATE_KEY }}  # or use password
+          password: ${{ secrets.SFTP_PASSWORD }}            # if using password
+          port: ${{ secrets.SFTP_PORT }}
+          local_path: './*'
+          remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
+          sftp_only: true
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -33,7 +33,9 @@ jobs:
             mkdocs-material-
       # - run: apt-get install pngquant
       - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-      - run: mkdocs gh-deploy --force
+      # - run: mkdocs gh-deploy --force
+      - name: Build MkDocs site
+        run: mkdocs build
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -49,7 +49,7 @@ jobs:
           local_path: './*'
           remote_path: '/blog-test/'
           # remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
-          sftp_only: true
+          sftp_only: false # testing
 
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}

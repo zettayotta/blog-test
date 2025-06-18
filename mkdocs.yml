@@ -160,7 +160,9 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Forside: index.md
-  - Krageroterna: index.md
+  - Forside:
+    - index.md
+  - Krageroterna:
+    - terna/index.md
   - Tags: tags.md
   - Om: om/index.md

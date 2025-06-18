@@ -20,6 +20,6 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
           local_path: './docs/tags.md'
-          remote_path: '/httpd.www/blog-test/'
+          remote_path: '/blog-test/'
           sftp_only: true
           password: ${{ secrets.SFTP_PASSWORD }}
